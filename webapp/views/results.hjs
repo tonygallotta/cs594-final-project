@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visualize the Universe - CS 594 Final Project</title>
+    {{>head}}
+  </head>
+  <body>
+    <div class="page-container">
+      {{> top_nav}}
+      <div class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+          {{> sidebar}}
+          <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+            <h1>Results</h1>
+            <p>I have downloaded the sample datasets and experimented with some yt examples, such as simple Projection Plots:</p>
+            <div class="panel panel-default">
+              <div class="panel-heading">Simple yt Projection Plot</div>
+              <div class="panel-body">
+                <img src="/images/ds14_scivis_0128_e4_dt04_0.9000_Projection_z_all_density.png" style="width: 100%; max-width:800px;"/>
+              </div>
+            </div>
+            <p>There are also some visualization examples in the <a href="https://bitbucket.org/darkskysims/darksky_catalog">darksky_catalog</a> repository which I've been looking at.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{> footer}}
+  </body>
+</html>

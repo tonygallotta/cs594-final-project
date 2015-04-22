@@ -1,0 +1,13 @@
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+  <div data-spy="affix" data-offset-top="45" data-offset-bottom="90">
+    <ul class="nav" id="sidebar-nav">
+      <li {{#intro}}class="active"{{/intro}}><a href="/">Introduction</a></li>
+      <li {{#tasks}}class="active"{{/tasks}}><a href="/tasks">Tasks</a></li>
+      <li {{#data}}class="active"{{/data}}><a href="/data">Data</a></li>
+      <li {{#hardware}}class="active"{{/hardware}}><a href="/hardware">Hardware</a></li>
+      <li {{#software}}class="active"{{/software}}><a href="/software">Software</a></li>
+      <li {{#vd}}class="active"{{/vd}}><a href="/vis-design">Visualization Design</a></li>
+      <li {{#results}}class="active"{{/results}}><a href="/results">Results</a></li>
+    </ul>
+   </div>
+</div>

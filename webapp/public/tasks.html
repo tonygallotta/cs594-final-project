@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Visualize the Universe - CS 594 Final Project</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="page-container">
+
+  <!-- top navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+       <div class="container">
+      <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="#">Visualize the Universe</a>
+      </div>
+       </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
+
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div data-spy="affix" data-offset-top="45" data-offset-bottom="90">
+            <ul class="nav" id="sidebar-nav">
+              <li><a href="/index.html">Introduction</a></li>
+              <li><a href="/tasks.html">Tasks</a></li>
+              <li><a href="/data.html">Data</a></li>
+              <li><a href="/software.html">Software</a></li>
+              <li><a href="/hardware.html">Hardware</a></li>
+              <li><a href="/vis-design.html">Visualization Design</a></li>
+              <li><a href="/results.html">Expected results and evaluation</a></li>
+            </ul>
+           </div>
+        </div>
+
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+          <h1 id="tasks">Tasks</h1>
+          <h2>Initial data integration and browsing</h2>
+          <p>The raw particle data from the Dark Sky simulations has been made available as SDF files. In addition to the raw particle data, Halo Catalog data, and a third dataset linking the Halo Catalogs to create a Merger Tree database will be available. A framework to ingest, process, and organize this data should be created.</p>
+
+          <h2>Halo identification and visualization</h2>
+          <p>The particles that compose a halo are defined by mass, position, and velocity. The halo finding process takes these particles as input and produces an additional set of properties for the halo. Each halo is collapsed into a single row of data, with columns corresponding to each data point.</p>
+          <p>Over time, halos can move, merge, or split apart. Merger trees are used to describe the evolution of a halo at any given time. The goal of this task is to visualize the evolution of a halo over time.</p>
+
+          <h2>Diving Deep into Halo Substructure</h2>
+          <p>Provide a way to visualize and compare the substructure of individual halos. Characteristics such as mass, velocity, and acquisition time of particles should be comparable among substructure components.</p>
+
+          <h2>Tying Everything Together</h2>
+          <p>Merge the results of the tasks above into a single unified visualization tool that allows a user to explore the data from the Dark Sky simulations.</p>
+
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+
+
+<div id="footer"><!--footer-->
+  <div class="container">Anthony Gallotta</div>
+</div><!--/footer-->
+
+  <!-- script references -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

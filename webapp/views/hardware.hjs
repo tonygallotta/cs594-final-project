@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visualize the Universe - CS 594 Final Project</title>
+    {{>head}}
+  </head>
+  <body>
+    <div class="page-container">
+      {{> top_nav}}
+      <div class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+          {{> sidebar}}
+          <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+              <h1>Hardware</h1>
+              <p>Several different machines were used for various stages of computations.</p>
+
+              <h2>13" MacBook Pro</h2>
+              <h3>2.6 GHz Intel Core i5 / 8 GB RAM</h3>
+              <p>Initial development and testing were done locally on this machine.</p>
+              <h2>Microsoft Azure</h2>
+              <h3>A4 Instance - 8 cores / 14GB RAM</h3>
+              <p>Microsoft offers a free 30 day trial of their <a href="http://azure.microsoft.com/en-us/">Azure platform</a>
+                for new users, so I signed up and spun up an instance running Ubuntu 14.04 in order to perform some longer running tasks that I didn't want to do on my laptop or Blue Waters, or pay for on another cloud service.
+              </p>
+              <h2>Blue Waters Supercomputer</h2>
+              <p>Specifications for the Blue Waters Supercomputer are available <a href="https://bluewaters.ncsa.illinois.edu/">here</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{> footer}}
+  </body>
+</html>
