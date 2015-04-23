@@ -36,7 +36,7 @@
                   <option value="green" selected="selected">Green</option>
                 </select>
                 <br>
-                <video id="dark-matter-density-vid" controls>
+                <video id="dark-matter-density-vid" width="800" controls>
                     <source id="dark-matter-density-vid-src" src="/video/green.mp4" type="video/mp4">
                 </video>
               </div>
