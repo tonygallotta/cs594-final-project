@@ -26,7 +26,18 @@
 
             <h3>FFmpeg</h3>
             <p><a href="https://ffmpeg.org/">FFmpeg</a> is a command line utility that was used to generate videos from sequences of images</p>
-            <pre>ffmpeg -framerate 10/1 -i img%04d.png -c:v libx264 -r 30 -pix_fmt yuv420p out.mp4</pre>
+            <div class="panel panel-default">
+              <div class="panel-heading">Installation on Ubuntu:</div>
+              <div class="panel-body">
+                <p>Installing via PPA</p>
+                <pre>
+$ sudo add-apt-repository ppa:mc3man/trusty-media
+$ sudo apt-get update
+$ sudo apt-get install ffmpeg -y</pre>
+                <p>Example usage:</p>
+                <pre>ffmpeg -framerate 10/1 -start_number 2 -i img%04d.png -c:v libx264 -r 30 -pix_fmt yuv420p out.mp4</pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>
