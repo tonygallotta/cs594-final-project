@@ -3,6 +3,14 @@
   <head>
     <title>Visualize the Universe - CS 594 Final Project</title>
     {{>head}}
+    <script type="text/javascript">
+      $(function(){
+        $("#cmap").change(function(){
+          $("#dark-matter-density-vid-src").attr("src", "/video/" + $(this).val() + ".mp4");
+          $("#dark-matter-density-vid").load();
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="page-container">
@@ -20,6 +28,26 @@
               </div>
             </div>
             <p>There are also some visualization examples in the <a href="https://bitbucket.org/darkskysims/darksky_catalog">darksky_catalog</a> repository which I've been looking at.</p>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">Dark Matter Density over Time</div>
+              <div class="panel-body">
+                <label for="cmap">Color Map</label>
+                <select name="cmap" id="cmap">
+                  <option value="PRISM_r">Prism</option>
+                  <option value="STD_GAMMA-II">Standard Gamma II</option>
+                  <option value="afmhot">AFM Hot</option>
+                  <option value="beach">Beach</option>
+                  <option value="blue">Blue</option>
+                  <option value="green" selected="selected">Green</option>
+                </select>
+                <br>
+                <video id="dark-matter-density-vid" controls>
+                    <source id="dark-matter-density-vid-src" src="/video/green.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
