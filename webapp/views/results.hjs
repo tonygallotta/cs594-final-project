@@ -20,20 +20,14 @@
           {{> sidebar}}
           <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
             <h1>Results</h1>
-            <p>I have downloaded the sample datasets and experimented with some yt examples, such as simple Projection Plots:</p>
-            <div class="panel panel-default">
-              <div class="panel-heading">Simple yt Projection Plot</div>
-              <div class="panel-body">
-                <img src="/images/ds14_scivis_0128_e4_dt04_0.9000_Projection_z_all_density.png" style="width: 100%; max-width:800px;"/>
-              </div>
-            </div>
-            <p>There are also some visualization examples in the <a href="https://bitbucket.org/darkskysims/darksky_catalog">darksky_catalog</a> repository which I've been looking at.</p>
 
             <div class="panel panel-default">
               <div class="panel-heading">Dark Matter Density over Time</div>
               <div class="panel-body">
+                <p>This visualization uses the time sequenced data files found <a href="http://darksky.slac.stanford.edu/scivis2015/data/ds14_scivis_0128/">here</a>, creating an x-axis projection of the dark matter density for each file. The images are combined at a framerate of 10 FPS (frames per second) to create a video. Created using yt and varying color maps. You can change the color map in the dropdown below - I think green was my favorite, so that's the default.</p>
                 <label for="cmap">Color Map</label>
                 <select name="cmap" id="cmap">
+                  <option value="withLegend">With Legend</option>
                   <option value="PRISM_r">Prism</option>
                   <option value="STD_GAMMA-II">Standard Gamma II</option>
                   <option value="afmhot">AFM Hot</option>

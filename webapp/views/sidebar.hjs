@@ -6,7 +6,6 @@
       <li {{#data}}class="active"{{/data}}><a href="/data">Data</a></li>
       <li {{#hardware}}class="active"{{/hardware}}><a href="/hardware">Hardware</a></li>
       <li {{#software}}class="active"{{/software}}><a href="/software">Software</a></li>
-      <li {{#vd}}class="active"{{/vd}}><a href="/vis-design">Visualization Design</a></li>
       <li {{#results}}class="active"{{/results}}><a href="/results">Results</a></li>
     </ul>
    </div>

@@ -3,3 +3,4 @@ results/*
 .ipynb_checkpoints/
 webapp/npm-debug.log
 webapp/node_modules/*
+output/
