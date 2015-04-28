@@ -18,6 +18,9 @@
             <h3>yt</h3>
             <p><a href="http://yt-project.org/" target="_blank">yt</a> is an open source Python project designed specifically for scientific data analysis and visualization.</p>
 
+            <h3>sdfpy</h3>
+            <p>A Python parser for self-describing data formatted files.</p>
+
             <h3>mpi4py</h3>
             <p><a href="http://mpi4py.scipy.org/">mpi4py</a> is a Python library for MPI programming, the primary method of parallelization of Blue Waters.</p>
 
