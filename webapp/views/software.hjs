@@ -36,6 +36,10 @@ $ sudo apt-get update
 $ sudo apt-get install ffmpeg -y</pre>
                 <p>Example usage:</p>
                 <pre>ffmpeg -framerate 10/1 -start_number 2 -i img%04d.png -c:v libx264 -r 30 -pix_fmt yuv420p out.mp4</pre>
+                <p>If you get an error like this:</p>
+                <pre>[libx264 @ 0x2517be0] width not divisible by 2 (1085x920)</pre>
+                <p>You'll wanna do this:</p>
+                <pre>ffmpeg -framerate 10/1 -start_number 2 -i withLegend%03d.png  -vf "crop=in_w-1:in_h" -c:v libx264 -r 30 -pix_fmt yuv420p withLegend.mp4</pre>
               </div>
             </div>
           </div>

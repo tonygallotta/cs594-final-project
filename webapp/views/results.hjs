@@ -9,6 +9,10 @@
           $("#dark-matter-density-vid-src").attr("src", "/video/" + $(this).val() + ".mp4");
           $("#dark-matter-density-vid").load();
         });
+        $("#type").change(function(){
+          $("#halos-over-time-vid-src").attr("src", "/video/" + $(this).val() + ".mp4");
+          $("#halos-over-time-vid").load();
+        });
       });
     </script>
   </head>
@@ -24,9 +28,10 @@
             <div class="panel panel-default">
               <div class="panel-heading">Dark Matter Density over Time</div>
               <div class="panel-body">
-                <p>This visualization uses the time sequenced data files found <a href="http://darksky.slac.stanford.edu/scivis2015/data/ds14_scivis_0128/">here</a>, creating an x-axis projection of the dark matter density for each file. The images are combined at a framerate of 10 FPS (frames per second) to create a video. Created using yt and varying color maps. You can change the color map in the dropdown below - I think green was my favorite, so that's the default.</p>
+                <p>This visualization uses the time sequenced data files found <a href="http://darksky.slac.stanford.edu/scivis2015/data/ds14_scivis_0128/">here</a>, creating an x-axis projection of the dark matter density for each file. The images are combined at a framerate of 10 FPS (frames per second) to create a video. These images were created using yt and varying color maps. You can change the color map in the dropdown below.</p>
                 <label for="cmap">Color Map</label>
                 <select name="cmap" id="cmap">
+                  <option value="density_over_time">Red-Blue (splat)</option>
                   <option value="withLegend">With Legend</option>
                   <option value="PRISM_r">Prism</option>
                   <option value="STD_GAMMA-II">Standard Gamma II</option>
@@ -36,12 +41,39 @@
                   <option value="green" selected="selected">Green</option>
                 </select>
                 <br>
+                <br>
                 <video id="dark-matter-density-vid" width="800" controls>
                     <source id="dark-matter-density-vid-src" src="/video/green.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
 
+            <div class="panel panel-default">
+              <div class="panel-heading">Halo Evolution over Time</div>
+              <div class="panel-body">
+                <p>This visualation shows a z-axis projection of particles and halos over time. One shows only halos, and the other shows halos (magenta) on top of particle data.</p>
+                <label for="type">Visualization Type:</label>
+                <select name="type" id="type">
+                  <option value="halos_over_time_white">Halos Only</option>
+                  <option value="halos_over_time" selected="selected">Halos + Particles</option>
+                </select>
+                <br>
+                <br>
+                <video id="halos-over-time-vid" width="800" controls>
+                  <source id="halos-over-time-vid-src" src="/video/halos_over_time.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">Traversing the z-axis</div>
+              <div class="panel-body">
+                <p>This visualation uses the <a href="http://darksky.slac.stanford.edu/simulations/ds14_a/">large (31TB) dataset</a>, coloring points by particle z-velocity in the x-y plane. The video advances along the z-axis beginning at a large halo, at a rate of 24 parsecs / frame, with a framerate of 60 FPS.</p>
+                <video id="z-travel-vid" width="800" controls>
+                  <source id="z-travel-vid-src" src="/video/zoom60fps.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </div>
