@@ -18,6 +18,9 @@
             <h3>yt</h3>
             <p><a href="http://yt-project.org/" target="_blank">yt</a> is an open source Python project designed specifically for scientific data analysis and visualization.</p>
 
+            <h3>thingking</h3>
+            <p>Used indirectly (as a dependency of yt), but <a href="https://bitbucket.org/zeropy/thingking">thingking</a> is worth mentioning because it facilitates buffered loading of data via HTTP. Without this capability, it wouldn't be possible to process the 31TB dataset on Blue Waters due to training account limitations, and even the 11G dataset would be difficult.</p>
+
             <h3>sdfpy</h3>
             <p><a href="https://bitbucket.org/darkskysims/sdfpy">sdfpy</a> is a Python parser for Self Describing Files.</p>
 
