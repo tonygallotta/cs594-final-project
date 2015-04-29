@@ -13,6 +13,10 @@
           $("#halos-over-time-vid-src").attr("src", "/video/" + $(this).val() + ".mp4");
           $("#halos-over-time-vid").load();
         });
+        $("#3d-scatter-halos").change(function(){
+          $("#3d-scatter-vid-src").attr("src", "/video/" + $(this).val() + ".mp4");
+          $("#3d-scatter-vid").load();
+        });
       });
     </script>
   </head>
@@ -71,6 +75,23 @@
                 <p>This visualation uses the <a href="http://darksky.slac.stanford.edu/simulations/ds14_a/">large (31TB) dataset</a>, coloring points by particle z-velocity in the x-y plane. The video advances along the z-axis beginning at a large halo, at a rate of 24 parsecs / frame, with a framerate of 60 FPS.</p>
                 <video id="z-travel-vid" width="800" controls>
                   <source id="z-travel-vid-src" src="/video/zoom60fps.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">3D Visualization</div>
+              <div class="panel-body">
+                <p>This visualation uses matplotlib to create a 3D scatter plot displaying the particle locations over time at 10 FPS.</p>
+                <br>
+                <br>
+                <label for="3d-scatter-halos">You want halos with that?</label>
+                <select name="3d-scatter-halos" id="3d-scatter-halos">
+                  <option value="3d_scatter">Yeah i want halos</option>
+                  <option value="3d_scatter_with_halos" selected="selected">No halos</option>
+                </select>
+                <video id="3d-scatter-vid" width="800" controls>
+                  <source id="3d-scatter-vid-src" src="/video/3d_scatter.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
