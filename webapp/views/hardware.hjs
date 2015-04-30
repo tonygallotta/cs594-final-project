@@ -17,11 +17,14 @@
               <h2 id="mbp">13" MacBook Pro</h2>
               <h3>2.6 GHz Intel Core i5 / 8 GB RAM</h3>
               <p>Initial development and testing were done locally on this machine.</p>
+
               <h2 id="azure">Microsoft Azure</h2>
               <h3>A4 Instance - 8 cores / 14GB RAM</h3>
               <p>Microsoft offers a free 30 day trial of their <a href="http://azure.microsoft.com/en-us/">Azure platform</a>
-                for new users, so I signed up and spun up an instance running Ubuntu 14.04 in order to perform some longer running tasks that I didn't want to do on my laptop or Blue Waters, or pay for on another cloud service.
+                for new users, so I signed up and spun up an instance running Ubuntu 14.04 in order to perform some longer running tasks that I didn't want to do on my laptop or Blue Waters, or pay for.
               </p>
+              <p>This was used for some of the computations with the 11G dataset. On Blue Waters I wasn't able to load the full dataset onto disk (limit seems to be around 15G for training users? it was loaded over HTTP with yt/thingking). As a result, some of the computations ran faster here by avoiding the network I/O.</p>
+
               <h2 id="bluewaters">Blue Waters Supercomputer</h2>
               <p>Specifications for the Blue Waters Supercomputer are available <a href="https://bluewaters.ncsa.illinois.edu/">here</a>.</p>
           </div>

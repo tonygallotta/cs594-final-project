@@ -14,18 +14,23 @@
             <h1 id="data">Software</h1>
             <p>The software developed will be primarily written in Python.<p>
             <h2>Libraries / Tools</h2>
-            <p>The following libraries are utilized for this project:</p>
+            <p>The following libraries are utilized for this project. Installing them on Blue Waters was not fun, but eventually I got them working by
+              building lots of things from source. <pre>python setup.py install --user</pre>  is your friend.
+            </p>
             <h3>yt</h3>
             <p><a href="http://yt-project.org/" target="_blank">yt</a> is an open source Python project designed specifically for scientific data analysis and visualization.</p>
 
             <h3>thingking</h3>
-            <p>Used indirectly (as a dependency of yt), but <a href="https://bitbucket.org/zeropy/thingking">thingking</a> is worth mentioning because it facilitates buffered loading of data via HTTP. Without this capability, it wouldn't be possible to process the 31TB dataset on Blue Waters due to training account limitations, and even the 11G dataset would be difficult.</p>
+            <p>Used indirectly (as a dependency of yt), but <a href="https://bitbucket.org/zeropy/thingking" target="_blank">thingking</a> is worth mentioning because it facilitates buffered loading of data via HTTP. Without this capability, it wouldn't be possible to process the 31TB dataset on Blue Waters due to training account limitations, and even the 11G dataset would be difficult.</p>
+
+            <h3>matplotlib</h3>
+            <p><a href="http://matplotlib.org/" target="_blank">matplotlib</a> is a dependency of yt, and was also used directly to generate some 3D visualizations.</p>
 
             <h3>sdfpy</h3>
-            <p><a href="https://bitbucket.org/darkskysims/sdfpy">sdfpy</a> is a Python parser for Self Describing Files.</p>
+            <p><a href="https://bitbucket.org/darkskysims/sdfpy" target="_blank">sdfpy</a> is a Python parser for Self Describing Files.</p>
 
             <h3>mpi4py</h3>
-            <p><a href="http://mpi4py.scipy.org/">mpi4py</a> is a Python library for MPI programming, the primary method of parallelization of Blue Waters.</p>
+            <p><a href="http://mpi4py.scipy.org/" target="_blank">mpi4py</a> is a Python library for MPI programming, the primary method of parallelization of Blue Waters.</p>
 
             <h3>OpenMPI</h3>
             <p><a href="http://www.itp.phys.ethz.ch/education/hs12/programming_techniques/openmpi.pdf">This guide</a> was helpful in getting OpenMPI installed on local and cloud machines.</p>

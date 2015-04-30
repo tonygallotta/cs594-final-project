@@ -10,7 +10,7 @@
       <div class="container">
         <div class="row row-offcanvas row-offcanvas-left">
           {{> sidebar}}
-          <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+          <div class="col-xs-14 col-sm-10" data-spy="scroll" data-target="#sidebar-nav">
             <h1 id="intro">Introduction</h1>
             <p>Our understanding of the Universe we inhabit and how it has progressed in its 13.7 billion year lifespan is primarily driven by cosmological simulations. These simulations of the formation of structure in the Universe usually simulate dark matter, a type of matter that neither absorbs nor emits light, but is believed to account for most of the matter in the Universe. Its existence and properties are inferred from its gravitational interaction with visible matter.</p>
             <p>These simulations require a large number of particles, on scales as large as 10240<sup>3</sup>. Visualizations are desired for these particles and the structures they form through gravitational interactions over time. Structures are typically identified via "halo finding". Dark matter halos are components of a galaxy that are roughly spherical, extending from some main visible component of the galaxy. These halos can represent galaxies or clusters of galaxies. Substructures in these halos may be identified as smaller halos, representing galaxies. The interactions of these structures and substructures shape the structure of the Universe as a whole. Thus, visualizing the transitions these halos go through can provide great insight to the history and future of our Universe.</p>

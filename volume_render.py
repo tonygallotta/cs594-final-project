@@ -1,6 +1,9 @@
 import yt
 import numpy as np
 
+# WON'T WORK AS IS
+# yt needs data to be in a grid format to perform volume rendering,
+# and SDF doesn't have grids
 filename = "data/ds14_scivis_0128_e4_dt04_0.9000"
 ds = yt.load(filename)
 ds.domain_left_edge = ds.domain_left_edge.astype(np.float64)
