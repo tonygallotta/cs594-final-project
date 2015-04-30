@@ -1,12 +1,15 @@
 body {
   padding: 50px;
+  padding-top: 80px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 #site-title {
-  color: #E0FF76;
-  font-size: 36px;
+  padding-top: 25px;
+  color: yellow;
+  font-size: 50px;
   font-style: italic;
+  font-family: 'Monoton', cursive;
 }
 
 h1, h2, h3, h4, h5 {

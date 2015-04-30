@@ -6,6 +6,8 @@
 <![endif]-->
 <link href="css/styles.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Monofett' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Monofett|Monoton' rel='stylesheet' type='text/css'>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>

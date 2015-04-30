@@ -13,17 +13,13 @@
           <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
             <h1 id="intro">Tasks</h1>
             <h2>Initial data integration and browsing</h2>
-            <p>The raw particle data from the Dark Sky simulations has been made available as SDF files. In addition to the raw particle data, Halo Catalog data, and a third dataset linking the Halo Catalogs to create a Merger Tree database will be available. A framework to ingest, process, and organize this data should be created.</p>
+            <p>The raw particle data from the Dark Sky simulations has been made available as SDF files. In addition to the raw particle data, Halo Catalog data, and a third dataset linking the Halo Catalogs to create a Merger Tree database will be available. A framework to ingest, process, and organize this data will be created.</p>
 
-            <h2>Halo identification and visualization</h2>
-            <p>The particles that compose a halo are defined by mass, position, and velocity. The halo finding process takes these particles as input and produces an additional set of properties for the halo. Each halo is collapsed into a single row of data, with columns corresponding to each data point.</p>
-            <p>Over time, halos can move, merge, or split apart. Merger trees are used to describe the evolution of a halo at any given time. The goal of this task is to visualize the evolution of a halo over time.</p>
+            <h2>Particle Visualization</h2>
+            <p>To get a better sense of the particle data itself, I will create 2D and 3D visualizations, experimenting with various color mappings and attributes.</p>
 
-            <h2>Diving Deep into Halo Substructure</h2>
-            <p>Provide a way to visualize and compare the substructure of individual halos. Characteristics such as mass, velocity, and acquisition time of particles should be comparable among substructure components.</p>
-
-            <h2>Tying Everything Together</h2>
-            <p>Merge the results of the tasks above into a single unified visualization tool that allows a user to explore the data from the Dark Sky simulations.</p>
+            <h2>Halo Identification and Visualization</h2>
+            <p>The particles that compose a halo are defined by mass, position, and velocity. The halo finding process takes these particles as input and produces an additional set of properties for the halo. Each halo is collapsed into a single row of data, with columns corresponding to each data point. The goal of this task is to visualize the evolution of a halo over time.</p>
           </div>
         </div>
       </div>
