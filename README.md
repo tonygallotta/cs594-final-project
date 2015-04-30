@@ -15,7 +15,7 @@ Dependencies
 
 Output
 ------
-Most of the scripts output png images numbered sequentially into an "output" directory (relative to wherever the script is run). You can use a tool like [FFmpeg](https://ffmpeg.org/) to turn these into videos.
+Most of the scripts output png images numbered sequentially into an "output" directory (relative to wherever the script is run). You can use a tool like [FFmpeg](https://ffmpeg.org/) to turn these into videos. The videos I've generated are in the webapp/public/video folder.
 
 ## What do they do and how do I run them?
 ### density\_over\_time.py
