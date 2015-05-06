@@ -16,6 +16,8 @@ rank = comm.Get_rank()
 
 if len(sys.argv) >= 2:
   file_num = rank + int(sys.argv[-1])
+elif rank > 100:
+  file_num = 100
 else:
   file_num = rank
 
@@ -85,10 +87,18 @@ ax.set_frame_on(False)
 ax.set_xticks([]); ax.set_yticks([])
 ax.axis('off')
 
-print "Finished at {:d}, saving figure".format(file_num)
-pl.savefig("output/3d_scatter{:0>4d}.png".format(file_num), bbox_inches="tight", pad_inches=0, facecolor="0.2")
+if rank >= 100 and rank < 460:
+  ax.azim = ax.azim + rank - 100
+elif rank >= 460:
+  scale_factor = (588 - rank) * (ax.get_xlim() / 128.0)
+  ax.set_xlim(ax.get_xlim() * scale_factor)
+  ax.set_ylim(ax.get_ylim() * scale_factor)
+  ax.set_zlim(ax.get_zlim() * scale_factor)
+
+print "Finished at {:d}, saving figure".format(rank)
+pl.savefig("output/3d_scatter{:0>4d}.png".format(rank), bbox_inches="tight", pad_inches=0, facecolor="0.2")
 
 # Plot all the halos in magenta
 ax.scatter(x, y, z, color='m', alpha=0.1)
-pl.savefig("output/3d_scatter_with_halos{:0>4d}.png".format(file_num), bbox_inches="tight", pad_inches=0, facecolor="0.2")
+pl.savefig("output/3d_scatter_with_halos{:0>4d}.png".format(rank), bbox_inches="tight", pad_inches=0, facecolor="0.2")
 print "Process {:d} completed".format(file_num)
