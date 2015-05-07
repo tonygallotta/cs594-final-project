@@ -93,6 +93,8 @@
                 <select name="3d-scatter-halos" id="3d-scatter-halos">
                   <option value="3d_scatter">Yeah i want halos</option>
                   <option value="3d_scatter_with_halos" selected="selected">No halos</option>
+                  <option value="3d_scatter_zr">With zoom and rotation (NEW)</option>
+                  <!-- <option value="3d_scatter_jenny">With subliminal Jennys</option> -->
                 </select>
                 <video id="3d-scatter-vid" width="800" controls>
                   <source id="3d-scatter-vid-src" src="/video/3d_scatter.mp4" type="video/mp4">
@@ -111,7 +113,6 @@
                   <li>Convert the SDF data to a grid</li>
                 </ul>
                 <p>The latter seems like an easier option. I made an attempt to do this but wasn't able to get it working (just got some empty images back).</p>
-                <img src="/images/nothingtoseehere.jpg" alt="Nothing to see here">
               </div>
             </div>
 
