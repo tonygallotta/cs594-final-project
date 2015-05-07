@@ -4,6 +4,7 @@ import matplotlib
 # this is important for running on servers without a GUI!
 matplotlib.use('Agg')
 import matplotlib.pylab as pl
+from mpl_toolkits.mplot3d import Axes3D
 from mpi4py import MPI
 from sdfpy import load_sdf
 import sys
@@ -19,11 +20,13 @@ if len(sys.argv) >= 2:
 elif rank > 100:
   file_num = 100
 else:
+  sys.exit()
   file_num = rank
 
 # Change me to a file system path if you have the data locally for
 # much performance gains
-prefix = "http://darksky.slac.stanford.edu/scivis2015/data/ds14_scivis_0128/"
+#prefix = "http://darksky.slac.stanford.edu/scivis2015/data/ds14_scivis_0128/"
+prefix = "data/"
 
 # Load N-body particles from a = 1.0 dataset. Particles have positions with
 # units of proper kpc, and velocities with units of km/s.
@@ -87,13 +90,13 @@ ax.set_frame_on(False)
 ax.set_xticks([]); ax.set_yticks([])
 ax.axis('off')
 
-if rank >= 100 and rank < 460:
-  ax.azim = ax.azim + rank - 100
-elif rank >= 460:
-  scale_factor = (588 - rank) * (ax.get_xlim() / 128.0)
-  ax.set_xlim(ax.get_xlim() * scale_factor)
-  ax.set_ylim(ax.get_ylim() * scale_factor)
-  ax.set_zlim(ax.get_zlim() * scale_factor)
+if rank >= 100:
+  ax.azim = (ax.azim + rank - 100) % 360
+if rank >= 460:
+  new_range = (1484 - rank) * (ax.get_xlim() / 1024.0)
+  ax.set_xlim(new_range)
+  ax.set_ylim(new_range)
+  ax.set_zlim(new_range)
 
 print "Finished at {:d}, saving figure".format(rank)
 pl.savefig("output/3d_scatter{:0>4d}.png".format(rank), bbox_inches="tight", pad_inches=0, facecolor="0.2")
